@@ -5,14 +5,14 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
+using System.Threading.Tasks;   
 using System.Windows.Forms;
 
 namespace DLVDProject
 {
-    public partial class frmEditApplicationsTypes : Form
+    public partial class frmEditApplicationsTypes : Form   
     {
-        int _ApplicationTypeID;
+        int _ApplicationTypeID; 
         public frmEditApplicationsTypes(int ApplicationTypeID)
         {
             InitializeComponent();
