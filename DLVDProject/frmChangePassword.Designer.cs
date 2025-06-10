@@ -116,6 +116,7 @@
             this.mtbConfermNewPassword.ReadOnly = true;
             this.mtbConfermNewPassword.Size = new System.Drawing.Size(185, 30);
             this.mtbConfermNewPassword.TabIndex = 139;
+            this.mtbConfermNewPassword.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.mtbConfermNewPassword_MaskInputRejected);
             this.mtbConfermNewPassword.Validating += new System.ComponentModel.CancelEventHandler(this.mtbConfermNewPassword_Validating);
             // 
             // mtbNewPassword

@@ -81,7 +81,7 @@ namespace DLVDProject
 */
         private void frmAdd_UdateUser_Load(object sender, EventArgs e)
         {
-            lbApplicationDate.Text = DateTime.Now.ToString();
+            lbUserName.Text = DateTime.Now.ToString();
             if (Mode == enMode.Add)
             {
                 lbTiltle.Text = "Add New Person";
@@ -226,7 +226,6 @@ Clear(); return;
         {
        /*     frmAdd_UpdatePerson frmAddPerson = new frmAdd_UpdatePerson (-1);
             frmAddPerson.ShowDialog();*/
-
         }
         private void mtbFiltertext_KeyPress(object sender, KeyPressEventArgs e)
         {
@@ -245,14 +244,16 @@ Clear(); return;
             }
             return false;
         }
-        bool DataNotCompletedYet()
+
+      
+      bool DataNotCompletedYet()
         {
             if(_Person == null)
             {
                 MessageBox.Show("Please Select a Person .", "Missing Data", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return true;
             }
-            if (Check(mtbUserName.Text, "UserName")) return true;
+            if (Check(lbUserName.Text, "UserName")) return true;
             if (Check(mtbPassword.Text, "Password")) return true;
             if (Check(mtbConfermPassword.Text, "Confirm Password")) return true;
 
@@ -261,7 +262,7 @@ Clear(); return;
         }
         private void AssignmentDataToObject()
         {
-            _User.UserName = mtbUserName.Text;
+            _User.UserName = lbUserName.Text;
             _User.Password = mtbPassword.Text;
             if (cbIsActive.Checked)
             {
@@ -296,7 +297,7 @@ Clear(); return;
         }
         private void lbSave_Click(object sender, EventArgs e)
         {
-          /*  if (DataNotCompletedYet()) return;
+          if (DataNotCompletedYet()) return;
                     if (HasValidationErrors(this))
                     {
                         MessageBox.Show("Please fix validation errors before saving.", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -312,7 +313,7 @@ Clear(); return;
             }
             else
                 MessageBox.Show($"An error occurred:", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-*/
+
         }
         private void maskedTextBox4_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
         {
@@ -376,6 +377,29 @@ Clear(); return;
         private void ctrShowDetails_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void mtbNewPassword_Validating(object sender, CancelEventArgs e)
+        {
+
+        }
+
+        private void tpLoginInfo_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void mtbConfermPassword_Validating_1(object sender, CancelEventArgs e)
+        {
+            if (mtbPassword.Text != mtbConfermPassword.Text)
+            {
+                errorProvider1.SetError(mtbConfermPassword, "You entered a deiferent Password"); // Clear the error
+                return;
+            }
+            else
+            {
+                errorProvider1.SetError(mtbConfermPassword, ""); // Clear the error
+            }
         }
     }
 }

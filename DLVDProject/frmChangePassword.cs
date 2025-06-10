@@ -186,5 +186,9 @@ namespace DLVDProject
 
         }
 
+        private void mtbConfermNewPassword_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
+        {
+
+        }
     }
 }

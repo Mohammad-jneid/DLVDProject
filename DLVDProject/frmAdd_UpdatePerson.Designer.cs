@@ -1,4 +1,4 @@
-﻿/*namespace DLVDProject
+﻿namespace DLVDProject
 {
     partial class frmAdd_UpdatePerson
     {
@@ -140,4 +140,3 @@
         public System.Windows.Forms.Label lblTitle;
     }
 }
-*/

@@ -123,7 +123,7 @@ namespace DLVDProject
 
         private void mtbSearch_TextChanged(object sender, EventArgs e)
         {
-            if (cbFilter?.Text == "None" || cbFilterIsActive.Text == "No")
+            if (cbFilter?.Text == "All" )
             {
                 if (DGVUserList?.DataSource is DataTable dtNone)
                 {
