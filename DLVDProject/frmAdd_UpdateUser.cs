@@ -14,7 +14,7 @@ using System.Windows.Forms;
 
 namespace DLVDProject
 {
-    public partial class frmAdd_UpdateDrivingLicense : Form
+    public partial class frmAdd_UpdateUser : Form
     {
 
         enum enMode { Add, Update, };
@@ -23,7 +23,7 @@ namespace DLVDProject
         clsPerson _Person;
 
         int _UserID = 0;
-        public frmAdd_UpdateDrivingLicense(int UserID)
+        public frmAdd_UpdateUser(int UserID)
         
         {
             _UserID = UserID;
@@ -40,7 +40,7 @@ namespace DLVDProject
             cbFilter.SelectedIndex = 0;
            
         }
-   /*     void AssignmentDataToForm()
+        void AssignmentDataToForm()
         {
             ctrShowDetails.lbPersonID.Text = _Person.PersonID.ToString();
             mtbFiltertext.Text = _Person.PersonID.ToString();
@@ -71,20 +71,20 @@ namespace DLVDProject
                 else if (ctrShowDetails.lbGendor.Text == "Female")
                     ctrShowDetails.pictureBox1.Image = Properties.Resources.person_girl;
             }
-        
+            
             mtbUserName.Text = _User.UserName;
             mtbPassword.Text = _User.Password;
             mtbConfermPassword.Text = _User.Password;
-            lbApplicationID.Text = _User.UserID.ToString();
+            lbUserID.Text = _User.UserID.ToString();
             cbIsActive.Checked = _User.IsActive;
         }
-*/
+
         private void frmAdd_UdateUser_Load(object sender, EventArgs e)
         {
-            lbUserName.Text = DateTime.Now.ToString();
+          //  mtbUserName.Text = DateTime.Now.ToString();
             if (Mode == enMode.Add)
             {
-                lbTiltle.Text = "Add New Person";
+                lbTiltle.Text = "Add New User";
                 _Person = new clsPerson();
                 return;
             }
@@ -96,9 +96,10 @@ namespace DLVDProject
                 return;
             }
             _Person = _User.Person;
-            lbTiltle.Text = "Update New Person";
+            lbTiltle.Text = "Update User";
             mtbFiltertext.ReadOnly = true;
-           // AssignmentDataToForm();
+            btnAddUser.Enabled = false;
+            AssignmentDataToForm();
 
         }
 
@@ -224,8 +225,8 @@ Clear(); return;
         }
         private void btnAddUser_Click(object sender, EventArgs e)
         {
-       /*     frmAdd_UpdatePerson frmAddPerson = new frmAdd_UpdatePerson (-1);
-            frmAddPerson.ShowDialog();*/
+            frmAdd_UpdatePerson frmAddPerson = new frmAdd_UpdatePerson(-1);
+            frmAddPerson.ShowDialog();
         }
         private void mtbFiltertext_KeyPress(object sender, KeyPressEventArgs e)
         {
@@ -253,7 +254,7 @@ Clear(); return;
                 MessageBox.Show("Please Select a Person .", "Missing Data", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return true;
             }
-            if (Check(lbUserName.Text, "UserName")) return true;
+            if (Check(mtbUserName.Text, "UserName")) return true;
             if (Check(mtbPassword.Text, "Password")) return true;
             if (Check(mtbConfermPassword.Text, "Confirm Password")) return true;
 
@@ -262,7 +263,7 @@ Clear(); return;
         }
         private void AssignmentDataToObject()
         {
-            _User.UserName = lbUserName.Text;
+            _User.UserName = mtbUserName.Text;
             _User.Password = mtbPassword.Text;
             if (cbIsActive.Checked)
             {
@@ -400,6 +401,16 @@ Clear(); return;
             {
                 errorProvider1.SetError(mtbConfermPassword, ""); // Clear the error
             }
+        }
+
+        private void lbTiltle_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void groupBox2_Enter(object sender, EventArgs e)
+        {
+
         }
     }
 }

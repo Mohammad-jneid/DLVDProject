@@ -1,6 +1,6 @@
 ﻿namespace DLVDProject
 {
-    partial class Add_UpdateLocalDriving
+    partial class frmAdd_UpdateLocalDriving
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Add_UpdateLocalDriving));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmAdd_UpdateLocalDriving));
             this.lbTiltle = new System.Windows.Forms.Label();
             this.tabContbtrol1 = new System.Windows.Forms.TabControl();
             this.tbPersonInfo = new System.Windows.Forms.TabPage();
@@ -36,10 +36,11 @@
             this.btnNext = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.mtbFiltertext = new System.Windows.Forms.MaskedTextBox();
+            this.btnAddUser = new System.Windows.Forms.Button();
             this.cbFilter = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.tpLoginInfo = new System.Windows.Forms.TabPage();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.cbLicenseClass = new System.Windows.Forms.ComboBox();
             this.lbCreatedBy = new System.Windows.Forms.Label();
             this.lbApplicationFees = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
@@ -49,7 +50,6 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.btnAddUser = new System.Windows.Forms.Button();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -58,6 +58,7 @@
             this.pictureBox13 = new System.Windows.Forms.PictureBox();
             this.lbSave = new System.Windows.Forms.Button();
             this.btnClose = new System.Windows.Forms.Button();
+            this.label6 = new System.Windows.Forms.Label();
             this.tabContbtrol1.SuspendLayout();
             this.tbPersonInfo.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -89,10 +90,10 @@
             this.tabContbtrol1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabContbtrol1.ImeMode = System.Windows.Forms.ImeMode.Off;
             this.tabContbtrol1.ItemSize = new System.Drawing.Size(10, 15);
-            this.tabContbtrol1.Location = new System.Drawing.Point(97, 2);
+            this.tabContbtrol1.Location = new System.Drawing.Point(122, 79);
             this.tabContbtrol1.Name = "tabContbtrol1";
             this.tabContbtrol1.SelectedIndex = 0;
-            this.tabContbtrol1.Size = new System.Drawing.Size(1146, 593);
+            this.tabContbtrol1.Size = new System.Drawing.Size(1146, 576);
             this.tabContbtrol1.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
             this.tabContbtrol1.TabIndex = 54;
             // 
@@ -105,7 +106,7 @@
             this.tbPersonInfo.Location = new System.Drawing.Point(4, 19);
             this.tbPersonInfo.Name = "tbPersonInfo";
             this.tbPersonInfo.Padding = new System.Windows.Forms.Padding(3);
-            this.tbPersonInfo.Size = new System.Drawing.Size(1138, 570);
+            this.tbPersonInfo.Size = new System.Drawing.Size(1138, 553);
             this.tbPersonInfo.TabIndex = 0;
             this.tbPersonInfo.Text = "Person Info";
             this.tbPersonInfo.UseVisualStyleBackColor = true;
@@ -152,6 +153,17 @@
             this.mtbFiltertext.Size = new System.Drawing.Size(321, 38);
             this.mtbFiltertext.TabIndex = 56;
             // 
+            // btnAddUser
+            // 
+            this.btnAddUser.BackColor = System.Drawing.Color.Gainsboro;
+            this.btnAddUser.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAddUser.Image = ((System.Drawing.Image)(resources.GetObject("btnAddUser.Image")));
+            this.btnAddUser.Location = new System.Drawing.Point(733, 21);
+            this.btnAddUser.Name = "btnAddUser";
+            this.btnAddUser.Size = new System.Drawing.Size(58, 62);
+            this.btnAddUser.TabIndex = 54;
+            this.btnAddUser.UseVisualStyleBackColor = false;
+            // 
             // cbFilter
             // 
             this.cbFilter.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
@@ -177,7 +189,7 @@
             // 
             // tpLoginInfo
             // 
-            this.tpLoginInfo.Controls.Add(this.comboBox1);
+            this.tpLoginInfo.Controls.Add(this.cbLicenseClass);
             this.tpLoginInfo.Controls.Add(this.lbCreatedBy);
             this.tpLoginInfo.Controls.Add(this.lbApplicationFees);
             this.tpLoginInfo.Controls.Add(this.label8);
@@ -196,15 +208,16 @@
             this.tpLoginInfo.Location = new System.Drawing.Point(4, 19);
             this.tpLoginInfo.Name = "tpLoginInfo";
             this.tpLoginInfo.Padding = new System.Windows.Forms.Padding(3);
-            this.tpLoginInfo.Size = new System.Drawing.Size(1138, 570);
+            this.tpLoginInfo.Size = new System.Drawing.Size(1138, 553);
             this.tpLoginInfo.TabIndex = 1;
             this.tpLoginInfo.Text = "Application Info";
             this.tpLoginInfo.UseVisualStyleBackColor = true;
+            this.tpLoginInfo.Click += new System.EventHandler(this.tpLoginInfo_Click);
             // 
-            // comboBox1
+            // cbLicenseClass
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.cbLicenseClass.FormattingEnabled = true;
+            this.cbLicenseClass.Items.AddRange(new object[] {
             "Class 1 - Small Motorcycle",
             "Class 2 - Heavy Motorcycle License",
             "Class 3 - Ordinary driving license",
@@ -212,28 +225,28 @@
             "Class 5 - Agricultural",
             "Class 6 - Small and medium bus",
             "Class 7- Truck and heavy vehicle"});
-            this.comboBox1.Location = new System.Drawing.Point(400, 224);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(370, 37);
-            this.comboBox1.TabIndex = 95;
+            this.cbLicenseClass.Location = new System.Drawing.Point(400, 224);
+            this.cbLicenseClass.Name = "cbLicenseClass";
+            this.cbLicenseClass.Size = new System.Drawing.Size(370, 37);
+            this.cbLicenseClass.TabIndex = 95;
             // 
             // lbCreatedBy
             // 
             this.lbCreatedBy.AutoSize = true;
             this.lbCreatedBy.Location = new System.Drawing.Point(395, 360);
             this.lbCreatedBy.Name = "lbCreatedBy";
-            this.lbCreatedBy.Size = new System.Drawing.Size(163, 29);
+            this.lbCreatedBy.Size = new System.Drawing.Size(53, 29);
             this.lbCreatedBy.TabIndex = 94;
-            this.lbCreatedBy.Text = "License Class";
+            this.lbCreatedBy.Text = "N\\A";
             // 
             // lbApplicationFees
             // 
             this.lbApplicationFees.AutoSize = true;
             this.lbApplicationFees.Location = new System.Drawing.Point(395, 291);
             this.lbApplicationFees.Name = "lbApplicationFees";
-            this.lbApplicationFees.Size = new System.Drawing.Size(163, 29);
+            this.lbApplicationFees.Size = new System.Drawing.Size(53, 29);
             this.lbApplicationFees.TabIndex = 93;
-            this.lbApplicationFees.Text = "License Class";
+            this.lbApplicationFees.Text = "N\\A";
             // 
             // label8
             // 
@@ -298,17 +311,6 @@
             this.label2.TabIndex = 0;
             this.label2.Text = "D.L.ApplicationID";
             // 
-            // btnAddUser
-            // 
-            this.btnAddUser.BackColor = System.Drawing.Color.Gainsboro;
-            this.btnAddUser.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAddUser.Image = ((System.Drawing.Image)(resources.GetObject("btnAddUser.Image")));
-            this.btnAddUser.Location = new System.Drawing.Point(733, 21);
-            this.btnAddUser.Name = "btnAddUser";
-            this.btnAddUser.Size = new System.Drawing.Size(58, 62);
-            this.btnAddUser.TabIndex = 54;
-            this.btnAddUser.UseVisualStyleBackColor = false;
-            // 
             // pictureBox3
             // 
             this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
@@ -363,7 +365,7 @@
             // 
             this.pictureBox13.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox13.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox13.Image")));
-            this.pictureBox13.Location = new System.Drawing.Point(1034, 587);
+            this.pictureBox13.Location = new System.Drawing.Point(1057, 661);
             this.pictureBox13.Name = "pictureBox13";
             this.pictureBox13.Size = new System.Drawing.Size(36, 41);
             this.pictureBox13.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -375,7 +377,7 @@
             this.lbSave.BackColor = System.Drawing.Color.Transparent;
             this.lbSave.Font = new System.Drawing.Font("Palatino Linotype", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbSave.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.lbSave.Location = new System.Drawing.Point(1065, 587);
+            this.lbSave.Location = new System.Drawing.Point(1088, 661);
             this.lbSave.Name = "lbSave";
             this.lbSave.Size = new System.Drawing.Size(67, 41);
             this.lbSave.TabIndex = 57;
@@ -388,7 +390,7 @@
             this.btnClose.Font = new System.Drawing.Font("Palatino Linotype", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnClose.Image = ((System.Drawing.Image)(resources.GetObject("btnClose.Image")));
             this.btnClose.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnClose.Location = new System.Drawing.Point(915, 587);
+            this.btnClose.Location = new System.Drawing.Point(938, 661);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(100, 41);
             this.btnClose.TabIndex = 56;
@@ -396,18 +398,31 @@
             this.btnClose.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnClose.UseVisualStyleBackColor = true;
             // 
-            // Add_UpdateLocalDriving
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.Red;
+            this.label6.Location = new System.Drawing.Point(413, 20);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(499, 38);
+            this.label6.TabIndex = 59;
+            this.label6.Text = "Add New Local Driving License";
+            // 
+            // frmAdd_UpdateLocalDriving
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1364, 660);
+            this.ClientSize = new System.Drawing.Size(1364, 714);
+            this.Controls.Add(this.label6);
             this.Controls.Add(this.pictureBox13);
             this.Controls.Add(this.lbSave);
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.lbTiltle);
             this.Controls.Add(this.tabContbtrol1);
-            this.Name = "Add_UpdateLocalDriving";
+            this.Name = "frmAdd_UpdateLocalDriving";
             this.Text = "Add_UpdateLocalDriving";
+            this.Load += new System.EventHandler(this.frmAdd_UpdateLocalDriving_Load);
             this.tabContbtrol1.ResumeLayout(false);
             this.tbPersonInfo.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
@@ -438,7 +453,7 @@
         private System.Windows.Forms.ComboBox cbFilter;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TabPage tpLoginInfo;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cbLicenseClass;
         private System.Windows.Forms.Label lbCreatedBy;
         private System.Windows.Forms.Label lbApplicationFees;
         private System.Windows.Forms.Label label8;
@@ -456,5 +471,6 @@
         private System.Windows.Forms.PictureBox pictureBox13;
         private System.Windows.Forms.Button lbSave;
         private System.Windows.Forms.Button btnClose;
+        private System.Windows.Forms.Label label6;
     }
 }

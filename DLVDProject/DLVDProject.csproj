@@ -62,11 +62,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Add_UpdateLocalDriving.cs">
+    <Compile Include="frmAdd_UpdateLocalDriving.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Add_UpdateLocalDriving.Designer.cs">
-      <DependentUpon>Add_UpdateLocalDriving.cs</DependentUpon>
+    <Compile Include="frmAdd_UpdateLocalDriving.Designer.cs">
+      <DependentUpon>frmAdd_UpdateLocalDriving.cs</DependentUpon>
     </Compile>
     <Compile Include="ctrShowPersonDetails.cs">
       <SubType>UserControl</SubType>
@@ -160,8 +160,8 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Add_UpdateLocalDriving.resx">
-      <DependentUpon>Add_UpdateLocalDriving.cs</DependentUpon>
+    <EmbeddedResource Include="frmAdd_UpdateLocalDriving.resx">
+      <DependentUpon>frmAdd_UpdateLocalDriving.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ctrShowPersonDetails.resx">
       <DependentUpon>ctrShowPersonDetails.cs</DependentUpon>

@@ -68,14 +68,14 @@
             this.changePasswordToolStripMenuItem,
             this.signOutToolStripMenuItem});
             this.jToolStripMenuItem.Name = "jToolStripMenuItem";
-            this.jToolStripMenuItem.Size = new System.Drawing.Size(320, 58);
+            this.jToolStripMenuItem.Size = new System.Drawing.Size(243, 45);
             this.jToolStripMenuItem.Text = "Account Setting";
             // 
             // changeUserInfoToolStripMenuItem
             // 
             this.changeUserInfoToolStripMenuItem.Image = global::DLVDProject.Properties.Resources.patient_information;
             this.changeUserInfoToolStripMenuItem.Name = "changeUserInfoToolStripMenuItem";
-            this.changeUserInfoToolStripMenuItem.Size = new System.Drawing.Size(432, 58);
+            this.changeUserInfoToolStripMenuItem.Size = new System.Drawing.Size(345, 46);
             this.changeUserInfoToolStripMenuItem.Text = "Current User Info";
             this.changeUserInfoToolStripMenuItem.Click += new System.EventHandler(this.changeUserInfoToolStripMenuItem_Click);
             // 
@@ -83,7 +83,7 @@
             // 
             this.changePasswordToolStripMenuItem.Image = global::DLVDProject.Properties.Resources.password;
             this.changePasswordToolStripMenuItem.Name = "changePasswordToolStripMenuItem";
-            this.changePasswordToolStripMenuItem.Size = new System.Drawing.Size(432, 58);
+            this.changePasswordToolStripMenuItem.Size = new System.Drawing.Size(345, 46);
             this.changePasswordToolStripMenuItem.Text = "Change Password";
             this.changePasswordToolStripMenuItem.Click += new System.EventHandler(this.changePasswordToolStripMenuItem_Click);
             // 
@@ -91,7 +91,7 @@
             // 
             this.signOutToolStripMenuItem.Image = global::DLVDProject.Properties.Resources.sign_out;
             this.signOutToolStripMenuItem.Name = "signOutToolStripMenuItem";
-            this.signOutToolStripMenuItem.Size = new System.Drawing.Size(432, 58);
+            this.signOutToolStripMenuItem.Size = new System.Drawing.Size(345, 46);
             this.signOutToolStripMenuItem.Text = "Sign out";
             this.signOutToolStripMenuItem.Click += new System.EventHandler(this.signOutToolStripMenuItem_Click_1);
             // 
@@ -99,14 +99,14 @@
             // 
             this.usersToolStripMenuItem.Image = global::DLVDProject.Properties.Resources.Add_New_User_721;
             this.usersToolStripMenuItem.Name = "usersToolStripMenuItem";
-            this.usersToolStripMenuItem.Size = new System.Drawing.Size(153, 58);
+            this.usersToolStripMenuItem.Size = new System.Drawing.Size(125, 45);
             this.usersToolStripMenuItem.Text = "Users";
             this.usersToolStripMenuItem.Click += new System.EventHandler(this.usersToolStripMenuItem_Click_1);
             // 
             // peopleToolStripMenuItem
             // 
             this.peopleToolStripMenuItem.Name = "peopleToolStripMenuItem";
-            this.peopleToolStripMenuItem.Size = new System.Drawing.Size(157, 58);
+            this.peopleToolStripMenuItem.Size = new System.Drawing.Size(123, 45);
             this.peopleToolStripMenuItem.Text = "People";
             this.peopleToolStripMenuItem.Click += new System.EventHandler(this.peopleToolStripMenuItem_Click);
             // 
@@ -123,14 +123,14 @@
             // applicationTypesToolStripMenuItem
             // 
             this.applicationTypesToolStripMenuItem.Name = "applicationTypesToolStripMenuItem";
-            this.applicationTypesToolStripMenuItem.Size = new System.Drawing.Size(455, 58);
+            this.applicationTypesToolStripMenuItem.Size = new System.Drawing.Size(436, 46);
             this.applicationTypesToolStripMenuItem.Text = "Application Types";
             this.applicationTypesToolStripMenuItem.Click += new System.EventHandler(this.applicationTypesToolStripMenuItem_Click);
             // 
             // manageTestTypesToolStripMenuItem
             // 
             this.manageTestTypesToolStripMenuItem.Name = "manageTestTypesToolStripMenuItem";
-            this.manageTestTypesToolStripMenuItem.Size = new System.Drawing.Size(455, 58);
+            this.manageTestTypesToolStripMenuItem.Size = new System.Drawing.Size(436, 46);
             this.manageTestTypesToolStripMenuItem.Text = "Manage Test Types";
             this.manageTestTypesToolStripMenuItem.Click += new System.EventHandler(this.manageTestTypesToolStripMenuItem_Click);
             // 
@@ -157,6 +157,7 @@
             this.localLicensesToolStripMenuItem.Name = "localLicensesToolStripMenuItem";
             this.localLicensesToolStripMenuItem.Size = new System.Drawing.Size(328, 46);
             this.localLicensesToolStripMenuItem.Text = "Local  Licenses";
+            this.localLicensesToolStripMenuItem.Click += new System.EventHandler(this.localLicensesToolStripMenuItem_Click);
             // 
             // internalLicensesToolStripMenuItem
             // 

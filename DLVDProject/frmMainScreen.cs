@@ -82,5 +82,11 @@ namespace DLVDProject
         {
 
         }
+
+        private void localLicensesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmAdd_UpdateUser frmAdd_ = new frmAdd_UpdateUser(-1);
+            frmAdd_.ShowDialog();   
+        }
     }
 }

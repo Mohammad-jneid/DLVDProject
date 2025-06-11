@@ -50,14 +50,14 @@ namespace DLVDProject
         
         private void editToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmAdd_UpdateDrivingLicense frmAdd_UdateUser = new frmAdd_UpdateDrivingLicense((int)DGVUserList.CurrentRow.Cells[0].Value);
+            frmAdd_UpdateUser frmAdd_UdateUser = new frmAdd_UpdateUser((int)DGVUserList.CurrentRow.Cells[0].Value);
             frmAdd_UdateUser.ShowDialog();
             _RefreshContactsList();
         }
 
         private void btnAddUser_Click(object sender, EventArgs e)
         {
-            frmAdd_UpdateDrivingLicense frmAdd_UdateUser = new frmAdd_UpdateDrivingLicense(-1);
+            frmAdd_UpdateUser frmAdd_UdateUser = new frmAdd_UpdateUser(-1);
             frmAdd_UdateUser.ShowDialog();  
             _RefreshContactsList();
         }
